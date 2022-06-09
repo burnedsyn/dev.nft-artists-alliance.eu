@@ -10,6 +10,6 @@ class AboutController extends Controller
      */
     public function indexAction(): void
     {
-           
+           ²
     }
 }
