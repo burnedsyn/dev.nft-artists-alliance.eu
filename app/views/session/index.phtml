@@ -1,0 +1,22 @@
+
+<form method='post' action='session/login'>
+    <p>
+        <label for="email">E-Mail</label>
+        <?php echo $this->tag->textField("email"); ?>
+    </p>
+    <p>
+        <label for="password">Password</label>
+        <?php echo $this->tag->textField("password"); ?>
+    </p>
+    <p>
+        <?php echo $this->tag->submitButton("Login"); ?>
+    </p>
+    
+    <!-- Login and password inputs ... -->
+
+    <input type='hidden' name='<?php echo $this->security->getTokenKey() ?>'
+        value='<?php echo $this->security->getToken() ?>'/>
+
+        
+
+</form>

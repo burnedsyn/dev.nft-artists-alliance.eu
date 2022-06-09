@@ -1,0 +1,51 @@
+
+
+<table class="table bg-info ">
+    <thead >
+      <tr>
+        
+        <th scope="col">Collection</th>
+        <th scope="col">Start Date</th>
+        <th scope="col">Project potential</th>
+        <th scope="col">Project max supply</th>
+        <th scope="col">Project current</th>
+        <th scope="col">Project link</th>
+      </tr>
+    </thead>
+    <tbody>
+
+     <?php foreach($NftCollection as $nft_collection) { ?>
+            <tr>
+            
+            <td><?php echo $nft_collection['name'];?></td>
+            <td><?php echo $nft_collection['startDate'];?></td>
+            <td><?php echo $nft_collection['variationMax'];?></td>
+            <td><?php echo $nft_collection['collecionMaxSupply'];?></td>
+            <td><?php echo $nft_collection['sales'];?></td>
+            <td><?php echo $this->tag->linkTo([$nft_collection['plateform'], 'View this project on opensea', 'class' => 'btn btn-primary',false]); ?></td>
+            </tr>
+       <?php } ?>
+    </tbody>
+  </table>
+  
+<div class="h-100">
+<?php echo $message; ?>
+<br>
+
+
+
+
+
+image collection<br>
+
+un descriptif complet<br>
+La liste des caractéristiques<br>
+La liste des Raretés<br>
+Point d'entrée mint également<br>
+lien vers une page showitem/idnft<br>
+    
+   
+</div>
+
+
+
